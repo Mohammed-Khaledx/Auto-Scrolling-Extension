@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Scrolling",
+  "version": "1.0",
+  "description": "auto scrolling into the web pages on double-click and follow mouse direction",
+  "author": "Mohammed Khaled Noby",
+  "permissions": ["tabs","activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "scroll.html",
+    "default_title": "Start Auto Scrolling ",
+    "default_icon": "photo_2023-10-26_20-17-57.png"
+  },"icons":{
+    "48":"photo_2023-10-26_20-17-57.png"
+  }
+}

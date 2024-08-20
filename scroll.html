@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        height: 200px;
+        width: 400px;
+        text-align: center;
+      }
+      /* *{
+            border: solid 2px brown;
+            border-radius: 10px;
+            overflow: hidden;
+            box-sizing: border-box;
+        } */
+      .container {
+        position: relative;
+        
+        margin: auto;
+        width: 50px;
+        height: 22px;
+        border-radius: 50px;
+        background-color: rgb(200, 176, 176);
+      }
+      #toggle-btn {
+        padding: 11px 11px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: 0.3s ease;
+      }
+
+      .active {
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        padding: 10px 10px;
+        font-size: 16px;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: rgb(220, 84, 21);
+      }
+      .inactive {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        padding: 10px 10px;
+        font-size: 16px;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="toggle-btn" class="inactive"></button>
+    </div>
+    <h1 class="label" for="">
+        Active Auto Scrolling
+    </h1>
+    <script src="scroll.js"></script>
+
+    <!-- <script src="popup.js"></script> -->
+  </body>
+</html>
