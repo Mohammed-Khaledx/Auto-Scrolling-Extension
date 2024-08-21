@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".container")
   const toggleBtn = document.getElementById("toggle-btn");
   const label = document.querySelector(".label");
 
-  toggleBtn.addEventListener("click", () => {
+  container.addEventListener("click", () => {
     const isActive = toggleBtn.classList.contains("active");
 
     if (isActive) {

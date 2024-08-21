@@ -1,15 +1,9 @@
 let activeScroll = false;
 
-
 let scroll = false;
 let scrollAmount = 0;
 let currentPosition;
 let lastPosition;
-
-
-
-
-
 
 function handleDoubleClick(e) {
   currentPosition = e.clientY;
@@ -22,7 +16,7 @@ function handleDoubleClick(e) {
   });
   autoScroll();
 }
-// 
+//
 function autoScroll() {
   if (!scroll) {
     return;
@@ -33,18 +27,16 @@ function autoScroll() {
 
 document.addEventListener("dblclick", function (e) {
   if (activeScroll) {
-    
     scroll = !scroll;
     handleDoubleClick(e);
   }
 });
 
-
-chrome.runtime.onMessage.addListener((message,sender,sendResponse) =>{
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   console.log(message.action);
   if (message.action === "disable") {
     activeScroll = false;
-  }else if(message.action === "enable"){
-    activeScroll = true
+  } else if (message.action === "enable") {
+    activeScroll = true;
   }
-})
+});
