@@ -1,5 +1,6 @@
 let activeScroll = false;
 
+
 let scroll = false;
 let scrollAmount = 0;
 let currentPosition;
@@ -25,6 +26,8 @@ function autoScroll() {
   requestAnimationFrame(autoScroll);
 }
 
+
+// double click listener
 document.addEventListener("dblclick", function (e) {
   if (activeScroll) {
     scroll = !scroll;
